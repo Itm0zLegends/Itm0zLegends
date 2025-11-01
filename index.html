@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Edouard ツ — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="viewport">
+    <!-- SECTION 1 : HERO -->
+    <section class="panel hero">
+      <div class="center">
+        <h1>Edouard ツ</h1>
+        <h2>Développeur HTML/CSS, Python, Java (à moitié.)</h2>
+      </div>
+
+      <button class="arrow" id="toProjects" aria-label="Aller aux projets">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M12 5v14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 13l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </section>
+
+    <!-- SECTION 2 : PROJETS -->
+    <section class="panel projects" id="projects">
+      <div class="projects-inner">
+        <h3>Mes projets :</h3> <br>
+        <div class="cards">
+          <article class="card">
+            <h4><a href="https://itm0zlegends.github.io/CrowDev/">CrowDEV</a></h4>
+            <p>Créateur de sites web, de bots Discord et plein d'autres !</p>
+          </article>
+
+          <article class="card">
+            <h4><a href="https://github.com/Itm0zLegends/CoreLittle">CoreLittle</a></h4>
+            <p>Un plugin léger pour Minecraft qui vise à enrichir l'expérience de jeu.</p>
+          </article>
+
+          <article class="card">
+            <h4><a href="https://itm0zlegends.github.io/isodownloader/">ISO DOWNLOADER</a></h4>
+            <p>Un site web permettant de télécharger facilement et en toute sécurité des images ISO.</p>
+          </article>
+
+          <article class="card">
+            <h4>NoobFinder (Archivé.)</h4>
+            <p>Site créé pour répertorier tous les noobs du jeu Roblox "Steal a Noob".</p>
+          </article>
+        </div>
+
+        <!-- FOOTER dans la même section -->
+        <footer class="footer">
+          <p>© 2025 Edouard ツ — Tous droits réservés</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+<script>
+(function(){
+  const btn = document.getElementById('toProjects');
+  const projects = document.getElementById('projects');
+
+  btn.addEventListener('click', () => {
+    btn.classList.add('clicked');
+    projects.scrollIntoView({behavior: 'smooth', block: 'start'});
+    setTimeout(()=> btn.classList.remove('clicked'), 600);
+  });
+
+  // Observer pour cacher la flèche
+  const observerHero = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const arrow = document.getElementById('toProjects');
+      if (!e.isIntersecting) arrow.classList.add('hidden');
+      else arrow.classList.remove('hidden');
+    });
+  }, {threshold: 0.6});
+
+  observerHero.observe(document.querySelector('.hero'));
+
+  // Observer pour l'animation des cards et footer
+  const observerProjects = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        projects.classList.add('projects-visible');
+      }
+    });
+  }, {threshold: 0.3});
+
+  observerProjects.observe(projects);
+
+})();
+</script>
+
+</body>
+</html>
