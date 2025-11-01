@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Edouard ツ — Portfolio</title>
+  <title>Edouard ツ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="viewport">
-    <!-- SECTION 1 : HERO -->
     <section class="panel hero">
       <div class="center">
         <h1>Edouard ツ</h1>
@@ -23,7 +22,6 @@
       </button>
     </section>
 
-    <!-- SECTION 2 : PROJETS -->
     <section class="panel projects" id="projects">
       <div class="projects-inner">
         <h3>Mes projets :</h3> <br>
@@ -49,7 +47,6 @@
           </article>
         </div>
 
-        <!-- FOOTER dans la même section -->
         <footer class="footer">
           <p>© 2025 Edouard ツ — Tous droits réservés</p>
         </footer>
@@ -68,7 +65,6 @@
     setTimeout(()=> btn.classList.remove('clicked'), 600);
   });
 
-  // Observer pour cacher la flèche
   const observerHero = new IntersectionObserver(entries => {
     entries.forEach(e => {
       const arrow = document.getElementById('toProjects');
@@ -79,7 +75,6 @@
 
   observerHero.observe(document.querySelector('.hero'));
 
-  // Observer pour l'animation des cards et footer
   const observerProjects = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting){
@@ -92,6 +87,6 @@
 
 })();
 </script>
-
 </body>
 </html>
+
