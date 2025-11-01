@@ -9,7 +9,6 @@
   --card: #0f1724;
 }
 
-/* reset / base */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
@@ -20,7 +19,6 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* viewport : conteneur scroll avec snap */
 .viewport{
   height:100vh;
   width:100%;
@@ -29,7 +27,6 @@ body{
   scroll-snap-type: y mandatory;
 }
 
-/* chaque panel prend tout l'écran */
 .panel{
   min-height:100vh;
   width:100%;
@@ -42,7 +39,6 @@ body{
   padding:40px 20px;
 }
 
-/* HERO specific */
 .hero{
   background:
     radial-gradient(600px 300px at 10% 20%, rgba(59,130,246,0.04), transparent 6%),
@@ -64,7 +60,6 @@ body{
   font-size:1.05rem;
 }
 
-/* arrow button (bottom) */
 .arrow{
   position: absolute;
   bottom: 28px;
@@ -99,10 +94,8 @@ body{
   100% { transform: translateY(0); }
 }
 
-/* hide arrow when scrolled away */
 .arrow.hidden{ opacity: 0; transform: translateY(20px); pointer-events:none; }
 
-/* PROJECTS panel */
 .projects{
   background: linear-gradient(circle at top, rgba(59,130,246,0.03), transparent 10%), var(--bg);
   padding-top:60px;
@@ -124,7 +117,6 @@ body{
   text-align:left;
 }
 
-/* cards */
 .cards{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -150,7 +142,6 @@ body{
 .card p{ color:var(--muted); line-height:1.45; font-size:0.95rem; }
 .card a{ color: #f0f4ff; text-decoration: none;}
 
-/* responsive */
 @media (max-width:1000px){
   .cards{ grid-template-columns: repeat(2, 1fr); }
   .center h1{ font-size:2.6rem; }
@@ -172,9 +163,8 @@ body{
   align-items: center;
 }
 
-/* Ajouter espace entre cards et footer */
 .footer {
-  margin-top: 100px; /* plus d'espace depuis les cards */
+  margin-top: 100px;
   padding: 18px 20px;
   background: rgba(59,130,246,0.05);
   border-radius: 20px;
@@ -187,16 +177,15 @@ body{
   transform: translateY(20px);
 }
 
-/* Animation fade-in + slide */
 .cards .card, .footer {
   opacity: 0;
   transform: translateY(20px);
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* Classe activée quand on scroll dans la section */
 .projects-visible .cards .card, 
 .projects-visible .footer {
   opacity: 1;
   transform: translateY(0);
+
 }
