@@ -16,5 +16,5 @@ Je m'appelle **Edouard** (Itm0z). Je suis un **jeune développeur** spécialisé
 ## Contact : 
 
 - **GitHub** : Itm0zLegends
-- **Email** : edouard.mro@icloud.com
+- **Email** : edouard@mroczek.fr
 - **Discord** : @itm0zlegends
