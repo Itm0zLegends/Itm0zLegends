@@ -3,9 +3,8 @@ Je m'appelle **Edouard** (Itm0z). Je suis un **jeune développeur** spécialisé
 
 ## Projets récents :
 - **Echorys** (de [CrowDEV](https://itm0zlegends.github.io/CrowDev/index.html)) : Un système de sonnerie pour vos serveurs Discord RP (Collège / Lycée)
-- **CyberSecure** (de [CrowDEV](https://itm0zlegends.github.io/CrowDev/index.html)) : Bot de protection pour vos serveurs. (On ne sais jamais !)
 - **CoreLittle** : Un plugin léger pour Minecraft qui vise à enrichir l'expérience de jeu.
-- **ISO DOWNLOADER** : Un site web permettant de télécharger facilement et en toute sécurité des images ISO.
+- **ISODOWNLOADER** : Un site web permettant de télécharger facilement et en toute sécurité des images ISO.
 
 ## Compétences :
 
